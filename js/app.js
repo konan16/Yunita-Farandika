@@ -436,7 +436,6 @@ window.addEventListener(
         <h2 class="text-light">${escapeHtml(name)}</h2>
         `;
 
-      document.getElementById("formnama").value = name;
       document.getElementById("namatamu").appendChild(div);
     }
 
