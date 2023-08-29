@@ -420,40 +420,23 @@ const modalFoto = (img) => {
   modal.show();
 };
 
-// window.addEventListener(
-//   "load",
-//   () => {
-//     let modal = new bootstrap.Modal("#exampleModal");
-//     let name = new URLSearchParams(window.location.search).get("to") ?? "";
-
-//     if (name.length == 0) {
-//       document.getElementById("namatamu").remove();
-//     } else {
-//       let div = document.createElement("div");
-//       div.classList.add("m-2");
-//       div.innerHTML = `
-//         <p class="mt-0 mb-1 mx-0 p-0 text-light">Kepada Yth Bapak/Ibu/Saudara/i</p>
-//         <h2 class="text-light">${escapeHtml(name)}</h2>
-//         `;
-
-//       document.getElementById("formnama").value = name;
-//       document.getElementById("namatamu").appendChild(div);
-//     }
-
-//     modal.show();
-//     opacity();
-//   },
-//   false
-// );
-
 window.addEventListener(
   "load",
   () => {
     let modal = new bootstrap.Modal("#exampleModal");
-    let nameParam = new URLSearchParams(window.location.search).get("to") ?? "";
+    let name = new URLSearchParams(window.location.search).get("to") ?? "";
 
-    if (nameParam.length != 0) {
-      document.getElementById("formnama").value = nameParam;
+    if (name.length == 0) {
+      document.getElementById("namatamu").remove();
+    } else {
+      let div = document.createElement("div");
+      div.classList.add("m-2");
+      div.innerHTML = `
+        <p class="mt-0 mb-1 mx-0 p-0 text-light">Kepada Yth Bapak/Ibu/Saudara/i</p>
+        <h2 class="text-light">${escapeHtml(name)}</h2>
+        `;
+
+      document.getElementById("namatamu").appendChild(div);
     }
 
     modal.show();

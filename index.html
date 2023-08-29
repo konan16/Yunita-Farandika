@@ -3,24 +3,22 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Undangan Pernikahan Wahyu & Riski</title>
-    <meta name="title" content="Undangan Pernikahan Wahyu & Riski" />
+    <title>Undangan Pernikahan Yunita & Farandika</title>
+    <meta name="title" content="Undangan Pernikahan Yunita & Farandika" />
     <meta
       name="description"
-      content="Website Undangan Pernikahan Wahyu & Riski Secara Online"
+      content="Website Undangan Pernikahan Yunita & Farandika Secara Online"
     />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="192x192"
-      href="./assets/images/icon-192x192.png"
-    />
+
     <meta name="theme-color" content="#212529" />
     <meta name="color-scheme" content="dark" />
-    <meta property="og:title" content="Undangan Pernikahan Wahyu & Riski" />
+    <!-- <meta
+      property="og:title"
+      content="Undangan Pernikahan Yunita & Farandika"
+    />
     <meta
       property="og:description"
-      content="Website Undangan Pernikahan Wahyu & Riski Secara Online"
+      content="Website Undangan Pernikahan Yunita & Farandika Secara Online"
     />
     <meta
       property="og:image"
@@ -31,15 +29,10 @@
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="id_ID" />
     <meta property="og:site_name" content="Undangan" />
-    <meta property="og:url" content="https://ulems.my.id/" />
+    <meta property="og:url" content="https://ulems.my.id/" /> -->
     <link
       rel="preconnect"
       href="https://cdn.jsdelivr.net"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="preconnect"
-      href="https://api.ulems.my.id"
       crossorigin="anonymous"
     />
     <link
@@ -83,11 +76,7 @@
     <link rel="stylesheet" href="./css/app.css" />
   </head>
 
-  <body
-    data-email="user@example.com"
-    data-password="12345678"
-    data-url="https://api.ulems.my.id"
-  >
+  <body>
     <nav
       class="navbar navbar-dark bg-dark navbar-expand fixed-bottom rounded-top-4 p-0"
       id="navbar-example2"
@@ -145,7 +134,7 @@
           <h1 class="font-estetik my-4" style="font-size: 3rem">
             Yunita & Farandika
           </h1>
-          <h4>Rabu, 30 Agustus 2023</h4>
+          <h4>Rabu, 30 Agustus 2024</h4>
           <a
             class="btn btn-outline-light btn-sm shadow rounded-pill px-3 my-2"
             target="_blank"
@@ -278,7 +267,7 @@
             <div class="border rounded-pill shadow py-2 px-4 mx-2 mb-4">
               <div
                 class="row justify-content-center"
-                data-waktu="2023-08-30 10:00:00"
+                data-waktu="2024-01-01 00:00:00"
                 id="tampilan-waktu"
               >
                 <div class="col-3 p-1">
@@ -308,12 +297,12 @@
             <div class="overflow-x-hidden">
               <div class="py-2" data-aos="fade-left" data-aos-duration="1500">
                 <h1 class="font-estetik" style="font-size: 2rem">Akad</h1>
-                <p>Pukul 09.00 WIB-Selesai</p>
+                <p>Pukul 10.00 WIB - Selesai</p>
               </div>
 
               <div class="py-2" data-aos="fade-right" data-aos-duration="1500">
                 <h1 class="font-estetik" style="font-size: 2rem">Resepsi</h1>
-                <p>Pukul 10.00 WIB-Selesai</p>
+                <p>Pukul 13.00 WIB - Selesai</p>
               </div>
             </div>
 
@@ -598,6 +587,104 @@
         </div>
       </div>
 
+      <!-- <section class="m-0 p-0" id="ucapan">
+        <div class="container">
+          <div class="card-body border rounded-4 shadow p-3">
+            <h1 class="font-estetik text-center mb-3" style="font-size: 3rem">
+              Ucapan & Doa
+            </h1>
+            <input type="hidden" id="idbalasan" />
+            <div class="mb-1" id="balasan"></div>
+            <div class="mb-3">
+              <label for="formnama" class="form-label">Nama</label>
+              <input
+                type="text"
+                class="form-control shadow-sm"
+                id="formnama"
+                placeholder="Isikan Nama Anda"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="hadiran" class="form-label" id="labelhadir"
+                >Kehadiran</label
+              >
+              <select
+                class="form-select shadow-sm"
+                aria-label="selectkehadiran"
+                id="hadiran"
+              >
+                <option value="0" selected>Konfirmasi Kehadiran</option>
+                <option value="1">Hadir</option>
+                <option value="2">Berhalangan</option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label for="formpesan" class="form-label">Ucapan & Doa</label>
+              <textarea
+                class="form-control shadow-sm"
+                id="formpesan"
+                rows="4"
+                placeholder="Tulis Ucapan & Doa"
+              ></textarea>
+            </div>
+            <div class="d-flex">
+              <button
+                class="flex-fill btn btn-danger btn-sm rounded-4 shadow m-1"
+                style="display: none"
+                onclick="resetForm()"
+                id="batal"
+              >
+                Batal<i class="fa-solid fa-xmark ms-1"></i>
+              </button>
+              <button
+                class="flex-fill btn btn-primary btn-sm rounded-4 shadow m-1"
+                style="display: none"
+                onclick="kirimBalasan()"
+                id="kirimbalasan"
+              >
+                Kirim<i class="fa-solid fa-paper-plane ms-1"></i>
+              </button>
+            </div>
+            <div class="d-grid mb-2">
+              <button
+                class="btn btn-primary btn-sm rounded-4 shadow"
+                onclick="kirim()"
+                id="kirim"
+              >
+                Kirim<i class="fa-solid fa-paper-plane ms-1"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="rounded-4 mt-4 mb-2">
+            <div id="daftarucapan"></div>
+          </div>
+
+          <nav class="d-flex justify-content-center">
+            <ul class="pagination mb-0">
+              <li class="page-item disabled" id="previous">
+                <button
+                  class="page-link"
+                  onclick="pagination.previous(this)"
+                  aria-label="Previous"
+                >
+                  <i class="fa-solid fa-circle-left me-1"></i>Sebelumnya
+                </button>
+              </li>
+              <li class="page-item" id="next">
+                <button
+                  class="page-link"
+                  onclick="pagination.next(this)"
+                  aria-label="Next"
+                >
+                  Selanjutnya<i class="fa-solid fa-circle-right ms-1"></i>
+                </button>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </section> -->
+
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
           fill="#111111"
@@ -640,7 +727,13 @@
                 <small class="text-light">
                   Tertarik dengan undangan seperti ini?
                   <a href="https://wa.me/6283847630740">Hubungi kami</a> untuk
-                  pesanan khusus Anda!<i
+                  pesanan khusus Anda!
+                </small>
+                <br />
+                <small>
+                  Atau kunjungi
+                  <a href="https://bahagiakita.my.id">bahagiakita</a> untuk info
+                  lebih lanjut
                 </small>
               </div>
             </div>
@@ -721,7 +814,7 @@
               <h1 class="font-estetik my-4" style="font-size: 2.5rem">
                 Yunita & Farandika
               </h1>
-              <div id="formnama"></div>
+              <div id="namatamu"></div>
               <button
                 type="button"
                 class="btn btn-light shadow rounded-4 mt-4"
